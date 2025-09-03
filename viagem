@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viajar Mais</title>
+
+    </head>
+    <body>
+
+    <hearder class:"container">
+        O mundo inteiro a um clique de distancia!
+    </hearder>
+    <h2> Escolha o destino que deseja viajar:</h2>
+    
+    <ul>
+        <li onclick="CarregarInformaçao('Salvador-BA')">Salvador-BA</li>
+        <li onclick="CarregarInformaçao('Natal-RN')">Natal-RN</li>
+        <li onclick="CarregarInformaçao('Santiago-CL')">Santiago-CL</li>
+        <li onclick="CarregarInformaçao('Buenos Aires-ARG')">Buenos Aires-ARG</li>
+    </ul>
+    <div id="info"></div>s
+    <footer>
+        &copy; @2025 Viajar Mais
+    </footer>
+<script>
+    async function CarregarInformaçao(info) {
+        try{
+            document.getElementById("informaçao").innerHTML= "Carregando informaçoes do pacote...";
+            await new Promise(resolve => setTimeout(resolve, 2000));
+        
+let mensagens= {
+    'Salvador-BA'eiro, festas únicas e uma energia contagiante fazem de Salvador o lugar perfeito para sua proxima viagem!",
+    "Natal-RN":"Mergulhe em aguas cristalinas, sinta a emoçao das dunas e viva dias inesqueciveis no coraçao do Nordeste.",
+    "Santiago-CL":"Viva o charme da capital chilena, com a Cordilheira dos Andes ao fundo, vinícolas encantadoras experiencias unicas em cada esquina!",
+    "Buenos Aires-ARG":"Terra de tango, da gastronomia premiada e das noites vibrantes que transgormam sua viagem em uma experiencia inesquecivel!"
+};
+document.getElementById("informaçao").innerHTML = mensagens[info]
+
+        }catch (erro) {
+            document.getElementById("informaçao").innerHTML = "Erro ao carregar informaçoes da viagem.";
+            console.error("Erro capturado:", erro);
+}
+}
+
+</script>
+</body>
+</html>
