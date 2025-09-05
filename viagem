@@ -4,13 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viajar Mais</title>
-
+<style>
+    body{
+        background-image: url('ima.jpg');
+        background-size: cover;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    header{
+        padding: 30px;
+        width: 95%;
+        background-color: aliceblue;
+        border-radius: 10px;
+        font-size: 20px;
+    }
+ ul {
+    list-style: none;
+    text-align: center;
+    font-size: 18px;
+    
+ }
+ footer{
+     padding: 30px;
+        width: 95%;
+        background-color: aliceblue;
+        border-radius: 10px;
+        font-size: 20px;
+        margin-top: 160px;
+        
+ }
+ li{
+     padding: 30px;
+        width: 40%;
+        background-color: aliceblue;
+        margin-top: 12px;
+        margin-left: 280px;
+ }
+ #info{
+    font-size: 20px;
+    color:rgb(255, 255, 255);
+ }
+</style>
     </head>
     <body>
-
-    <hearder class:"container">
+        
+    <header class:"container">
         O mundo inteiro a um clique de distancia!
-    </hearder>
+    </header>
     <h2> Escolha o destino que deseja viajar:</h2>
     
     <ul>
@@ -19,26 +61,27 @@
         <li onclick="CarregarInformaçao('Santiago-CL')">Santiago-CL</li>
         <li onclick="CarregarInformaçao('Buenos Aires-ARG')">Buenos Aires-ARG</li>
     </ul>
-    <div id="info"></div>s
+    <div id="info"></div>
     <footer>
         &copy; @2025 Viajar Mais
     </footer>
 <script>
-    async function CarregarInformaçao(info) {
+    async function CarregarInformaçao(informaçoes) {
         try{
-            document.getElementById("informaçao").innerHTML= "Carregando informaçoes do pacote...";
+            document.getElementById("info").innerHTML= "Carregando informaçoes do pacote...";
             await new Promise(resolve => setTimeout(resolve, 2000));
         
-let mensagens= {
-    'Salvador-BA:"eiro, festas únicas e uma energia contagiante fazem de Salvador o lugar perfeito para sua proxima viagem!",
+    let mensagens= {
+    'Salvador-BA':"Sol o ano inteiro, festas únicas e uma energia contagiante fazem de Salvador o lugar perfeito para sua proxima viagem!",
     'Natal-RN':"Mergulhe em aguas cristalinas, sinta a emoçao das dunas e viva dias inesqueciveis no coraçao do Nordeste.",
     'Santiago-CL':"Viva o charme da capital chilena, com a Cordilheira dos Andes ao fundo, vinícolas encantadoras experiencias unicas em cada esquina!",
-    'Buenos Aires-ARG':"Terra de tango, da gastronomia premiada e das noites vibrantes que transgormam sua viagem em uma experiencia inesquecivel!"
-};
-document.getElementById("informaçao").innerHTML = mensagens[info]
+    'Buenos Aires-ARG':"Terra de tango, da gastronomia premiada e das noites vibrantes que transformam sua viagem em uma experiencia inesquecivel!"
+ };
+ document.getElementById("info").innerHTML = mensagens[informaçoes]
 
-        }catch (erro) {
-            document.getElementById("informaçao").innerHTML = "Erro ao carregar informaçoes da viagem.";
+ }
+       catch (erro) {
+            document.getElementById("info").innerHTML = "Erro ao carregar informaçoes da viagem.";
             console.error("Erro capturado:", erro);
 }
 }
