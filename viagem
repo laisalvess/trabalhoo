@@ -30,10 +30,10 @@
             await new Promise(resolve => setTimeout(resolve, 2000));
         
 let mensagens= {
-    'Salvador-BA'eiro, festas únicas e uma energia contagiante fazem de Salvador o lugar perfeito para sua proxima viagem!",
-    "Natal-RN":"Mergulhe em aguas cristalinas, sinta a emoçao das dunas e viva dias inesqueciveis no coraçao do Nordeste.",
-    "Santiago-CL":"Viva o charme da capital chilena, com a Cordilheira dos Andes ao fundo, vinícolas encantadoras experiencias unicas em cada esquina!",
-    "Buenos Aires-ARG":"Terra de tango, da gastronomia premiada e das noites vibrantes que transgormam sua viagem em uma experiencia inesquecivel!"
+    'Salvador-BA:"eiro, festas únicas e uma energia contagiante fazem de Salvador o lugar perfeito para sua proxima viagem!",
+    'Natal-RN':"Mergulhe em aguas cristalinas, sinta a emoçao das dunas e viva dias inesqueciveis no coraçao do Nordeste.",
+    'Santiago-CL':"Viva o charme da capital chilena, com a Cordilheira dos Andes ao fundo, vinícolas encantadoras experiencias unicas em cada esquina!",
+    'Buenos Aires-ARG':"Terra de tango, da gastronomia premiada e das noites vibrantes que transgormam sua viagem em uma experiencia inesquecivel!"
 };
 document.getElementById("informaçao").innerHTML = mensagens[info]
 
